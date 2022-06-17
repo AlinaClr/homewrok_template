@@ -1,11 +1,3 @@
-'''
-Author: AlinaClr 1516690324@qq.com
-Date: 2022-06-16 16:11:03
-LastEditors: AlinaClr 1516690324@qq.com
-LastEditTime: 2022-06-16 16:14:21
-FilePath: /homewrok_template/code/01_test.py
-Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
-'''
 from random import *
 import math
 
@@ -38,64 +30,120 @@ def bubbleSort(list):
                 list[i+1] = swap
                 swappedElements = True
 
-def merge(a, b):
-    c = []
-    h = j = 0
-    while j < len(a) and h < len(b):
+
+
+'''
+先  2 2 排序
+再  4 4 排序
+依次类推
+'''
+
+
+def mergeSort(a, n):
+    s = 1
+    b = [i for i in range(n)]
+    # print(b)
+    while (s < n):
+        mergePass(a, b, s, n)  # 合并到数组b
+        s += s
+        mergePass(b, a, s, n)  # 合并到数组a
+        s += s
+
+
+def mergePass(x, y, s, n):  # 合并大小为s 的相邻子数组
+    i = 0
+    while (i <= n - 2 * s):  # 合并大小为s 的相邻连段子数组
+        merge(x, y, i, i + s - 1, i + 2 * s - 1)
+        i = i + 2 * s
+    if (i + s < n):  # 剩下的元素小于2s
+        merge(x, y, i, i + s - 1, n - 1)
+    else:
+        for j in range(i, n):
+            y[j] = x[j]
+
+
+def merge(c, d, l, m, r):  # 合并c[l:m] 和 c[m+1:r] 到d[1:r]
+    i = l
+    k = l
+    j = m + 1
+    while ((i <= m) and (j <= r)):
         global count2
         count2 = count2 + 1
-        if a[j] < b[h]:
-            c.append(a[j])
-            j += 1
+        if (c[i] <= c[j]):  # 依次比较两个数的大小，选择性加入
+            d[k] = c[i]
+            k = k + 1
+            i = i + 1
         else:
-            c.append(b[h])
-            h += 1
-    if j == len(a):
-        for i in b[h:]:
-            c.append(i)
-    else:
-        for i in a[j:]:
-            c.append(i)
-    return c
+            d[k] = c[j]
+            k = k + 1
+            j = j + 1
+    if (i > m):  # 剩余右方的数列加入
+        for q in range(j, r + 1):
+            d[k] = c[q]
+            k = k + 1
 
-def mergeSort(lists):
-    if len(lists) <= 1:
-        return lists
-    middle = len(lists) // 2
-    left = mergeSort(lists[:middle])
-    right = mergeSort(lists[middle:])
-    return merge(left, right)
+    else:  # 剩余左方的数列加入
+        for q in range(i, m + 1):
+            d[k] = c[q]
+            k = k + 1
 
-def quickSort(lists,i,j):
-    if i >= j:
-        return list
-    pivot = lists[i]
-    low = i
-    high = j
-    while i < j:
-        global count3
-        count3 = count3 + 1
-        while i < j and lists[j] >= pivot:
-            j -= 1
-        lists[i]=lists[j]
-        while i < j and lists[i] <=pivot:
-            i += 1
-        lists[j]=lists[i]
-    lists[j] = pivot
-    quickSort(lists,low,i-1)
-    quickSort(lists,i+1,high)
-    return lists
+def partition(nums, low, high):
+    high_flag = True
+    low_flag = False
+    pivot = nums[low]
+    while low < high and low < len(nums) and high < len(nums):
+        if high_flag:
+            if nums[high] < pivot:
+                nums[low] = nums[high]
+                high_flag = False
+                low_flag = True
+            else:
+                high -= 1
+        if low_flag:
+            if nums[low] > pivot:
+                nums[high] = nums[low]
+                high_flag = True
+                low_flag = False
+            else:
+                low += 1
+    nums[low] = pivot
+    return low
+
+def quickSort(nums):
+    arr = []
+    low = 0
+    high = len(nums) - 1
+    if low < high:
+        mid = partition(nums, low, high)
+        if low < mid - 1:
+            arr.append(low)
+            arr.append(mid - 1)
+        if mid + 1 < high:
+            arr.append(mid + 1)
+            arr.append(high)
+        while arr:
+            global count3
+            count3 = count3 + 1
+            r = arr.pop()
+            l = arr.pop()
+            mid = partition(nums, l, r)
+            if l < mid - 1:
+                arr.append(l)
+                arr.append(mid - 1)
+            if mid + 1 < r:
+                arr.append(mid + 1)
+                arr.append(r)
 
 if __name__ == '__main__':
-    seed(10)
+    seed(randint(0,10000))
     randomNum = []
     n = int(input('请输入生成随机数的个数'))
     for i in range(n):
         r = myrandint(100000,randint(1,100000))
         randomNum.append(next(r))
     bubbleSort(randomNum)
-    mergeSort(randomNum)
-    quickSort(randomNum,0,len(randomNum)-1)
+    mergeSort(randomNum,len(randomNum))
+    quickSort(randomNum)
     print(count1)
     print(count2)
     print(count3)
