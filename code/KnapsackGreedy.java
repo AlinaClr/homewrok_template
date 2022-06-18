@@ -2,7 +2,7 @@
  * @Author: AlinaClr 1516690324@qq.com
  * @Date: 2022-06-18 14:21:28
  * @LastEditors: AlinaClr 1516690324@qq.com
- * @LastEditTime: 2022-06-18 15:54:47
+ * @LastEditTime: 2022-06-18 16:03:44
  * @FilePath: /homewrok_template/code/KnapsackGreedy.java
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -15,19 +15,22 @@ public class KnapsackGreedy {
         System.out.println("请输入待选择的物品的个数：");
         Scanner scanner = new Scanner(System.in);
         n = scanner.nextInt();
-        System.out.println("请输入背包容量：");
-        C = scanner.nextDouble();
-        double[] w = new double[]{18,15,10};    //物品重量数组
-        double[] v = new double[]{25,24,15};    //物品价值数组
+        //System.out.println("请输入背包容量：");
+        C = 134;
+        double[] w = new double[n];    //物品重量数组
+        double[] v = new double[n];    //物品价值数组
         double[] x = new double[n];//平均价值
-        //for(i = 0; i < n; i++){
-        //    a[i] = Math.floor(Math.random()*20);
-        //}
-        //for(i = 0; i < n; i++){
-          //  b[i] = Math.floor(Math.random()*20);
-        //}
+        for(i = 0; i < n; i++){
+            w[i] = (int)((Math.random() * 1103515245 + 12345) % 500);
+        }
+        for(i = 0; i < n; i++){
+            v[i] = (int)((Math.random() * 1103515245 + 12345) % 500);
+        }
+		long start=System.nanoTime();
         double value = Knapsack(w,v,x,C,n);
+		long end=System.nanoTime();
         System.out.println("最大价值为："+value);
+		System.out.println("执行时间为："+(end-start)/1000000.0+"ms");
     }
 
     static void sort(double[] a, double[] b, int n){
@@ -74,7 +77,6 @@ public class KnapsackGreedy {
         for(i=0;i<n;i++){
             result += x[i]*b[i];
         }
-        System.out.println(result);
         return result;
     }
 }

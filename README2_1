@@ -1,0 +1,297 @@
+实验验证:
+gitpod /workspace/homewrok_template/code (main) $ cd "/workspace/homewrok_template/code/" && javac DP.java && java DP
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+执行时间为：0.00479ms
+最大价值为：37
+
+2.验证C不变时，随着n的增大的增长曲线
+gitpod /workspace/homewrok_template/code (main) $ cd "/workspace/homewrok_template/code/" && javac DP.java && java DP
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+请输入最大容量：
+200
+请输入n的值：
+10
+执行时间为：0.21437ms
+最大价值为：314
+gitpod /workspace/homewrok_template/code (main) $ cd "/workspace/homewrok_template/code/" && javac DP.java && java DP
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+请输入最大容量：
+200
+请输入n的值：
+20
+执行时间为：0.41492ms
+最大价值为：584
+gitpod /workspace/homewrok_template/code (main) $ cd "/workspace/homewrok_template/code/" && javac DP.java && java DP
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+请输入最大容量：
+200
+请输入n的值：
+40
+执行时间为：0.745439ms
+最大价值为：480
+gitpod /workspace/homewrok_template/code (main) $ cd "/workspace/homewrok_template/code/" && javac DP.java && java DP
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+请输入最大容量：
+200
+请输入n的值：
+100
+执行时间为：1.66025ms
+最大价值为：1003
+gitpod /workspace/homewrok_template/code (main) $ cd "/workspace/homewrok_template/code/" && javac DP.java && java DP
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+请输入最大容量：
+200
+请输入n的值：
+200
+执行时间为：3.13071ms
+最大价值为：1540
+gitpod /workspace/homewrok_template/code (main) $ cd "/workspace/homewrok_template/code/" && javac DP.java && java DP
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+请输入最大容量：
+200
+请输入n的值：
+400
+执行时间为：5.84123ms
+最大价值为：2049
+gitpod /workspace/homewrok_template/code (main) $ cd "/workspace/homewrok_template/code/" && javac DP.java && java DP
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+请输入最大容量：
+200
+请输入n的值：
+800
+执行时间为：5.828369ms
+最大价值为：3472
+gitpod /workspace/homewrok_template/code (main) $ cd "/workspace/homewrok_template/code/" && javac DP.java && java DP
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+请输入最大容量：
+200
+请输入n的值：
+2000
+执行时间为：7.891799ms
+最大价值为：5588
+gitpod /workspace/homewrok_template/code (main) $ cd "/workspace/homewrok_template/code/" && javac DP.java && java DP
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+请输入最大容量：
+400
+请输入n的值：
+10
+执行时间为：0.48687ms
+最大价值为：533
+gitpod /workspace/homewrok_template/code (main) $ cd "/workspace/homewrok_template/code/" && javac DP.java && java DP
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+请输入最大容量：
+400
+请输入n的值：
+20
+执行时间为：0.83885ms
+最大价值为：733
+gitpod /workspace/homewrok_template/code (main) $ cd "/workspace/homewrok_template/code/" && javac DP.java && java DP
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+请输入最大容量：
+400
+请输入n的值：
+40
+执行时间为：1.39269ms
+最大价值为：1198
+gitpod /workspace/homewrok_template/code (main) $ cd "/workspace/homewrok_template/code/" && javac DP.java && java DP
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+请输入最大容量：
+400
+请输入n的值：
+100
+执行时间为：3.30378ms
+最大价值为：1615
+gitpod /workspace/homewrok_template/code (main) $ cd "/workspace/homewrok_template/code/" && javac DP.java && java DP
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+请输入最大容量：
+400
+请输入n的值：
+200
+执行时间为：6.43723ms
+最大价值为：1951
+gitpod /workspace/homewrok_template/code (main) $ cd "/workspace/homewrok_template/code/" && javac DP.java && java DP
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+请输入最大容量：
+400
+请输入n的值：
+400
+执行时间为：7.353289ms
+最大价值为：3191
+gitpod /workspace/homewrok_template/code (main) $ cd "/workspace/homewrok_template/code/" && javac DP.java && java DP
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+请输入最大容量：
+400
+请输入n的值：
+800
+执行时间为：7.709689ms
+最大价值为：4553
+gitpod /workspace/homewrok_template/code (main) $ cd "/workspace/homewrok_template/code/" && javac DP.java && java DP
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+请输入最大容量：
+400
+请输入n的值：
+2000
+执行时间为：10.017279ms
+最大价值为：7377
+gitpod /workspace/homewrok_template/code (main) $ cd "/workspace/homewrok_template/code/" && javac DP.java && java DP
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+请输入最大容量：
+800
+请输入n的值：
+10
+执行时间为：0.74097ms
+最大价值为：593
+gitpod /workspace/homewrok_template/code (main) $ cd "/workspace/homewrok_template/code/" && javac DP.java && java DP
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+请输入最大容量：
+800
+请输入n的值：
+20
+执行时间为：1.55527ms
+最大价值为：979
+gitpod /workspace/homewrok_template/code (main) $ cd "/workspace/homewrok_template/code/" && javac DP.java && java DP
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+请输入最大容量：
+800
+请输入n的值：
+40
+执行时间为：2.773539ms
+最大价值为：1657
+gitpod /workspace/homewrok_template/code (main) $ cd "/workspace/homewrok_template/code/" && javac DP.java && java DP
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+请输入最大容量：
+800
+请输入n的值：
+100
+执行时间为：6.40455ms
+最大价值为：2130
+gitpod /workspace/homewrok_template/code (main) $ cd "/workspace/homewrok_template/code/" && javac DP.java && java DP
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+请输入最大容量：
+800
+请输入n的值：
+200
+执行时间为：8.110759ms
+最大价值为：3264
+gitpod /workspace/homewrok_template/code (main) $ cd "/workspace/homewrok_template/code/" && javac DP.java && java DP
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+请输入最大容量：
+800
+请输入n的值：
+400
+执行时间为：7.755009ms
+最大价值为：4603
+gitpod /workspace/homewrok_template/code (main) $ cd "/workspace/homewrok_template/code/" && javac DP.java && java DP
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+请输入最大容量：
+800
+请输入n的值：
+800
+执行时间为：11.110109ms
+最大价值为：6444
+gitpod /workspace/homewrok_template/code (main) $ cd "/workspace/homewrok_template/code/" && javac DP.java && java DP
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+请输入最大容量：
+800
+请输入n的值：
+2000
+执行时间为：17.877249ms
+最大价值为：10792
+gitpod /workspace/homewrok_template/code (main) $ cd "/workspace/homewrok_template/code/" && javac DP.java && java DP
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+请输入最大容量：
+2000
+请输入n的值：
+10
+执行时间为：1.80896ms
+最大价值为：537
+gitpod /workspace/homewrok_template/code (main) $ cd "/workspace/homewrok_template/code/" && javac DP.java && java DP
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+请输入最大容量：
+2000
+请输入n的值：
+20
+执行时间为：3.58025ms
+最大价值为：1010
+gitpod /workspace/homewrok_template/code (main) $ cd "/workspace/homewrok_template/code/" && javac DP.java && java DP
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+请输入最大容量：
+2000
+请输入n的值：
+40
+执行时间为：6.45253ms
+最大价值为：1867
+gitpod /workspace/homewrok_template/code (main) $ cd "/workspace/homewrok_template/code/" && javac DP.java && java DP
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+请输入最大容量：
+2000
+请输入n的值：
+100
+执行时间为：7.990389ms
+最大价值为：3592
+
+gitpod /workspace/homewrok_template/code (main) $ cd "/workspace/homewrok_template/code/" && javac DP.java && java DP
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+请输入最大容量：
+2000
+请输入n的值：
+200
+执行时间为：10.670709ms
+最大价值为：5210
+
+gitpod /workspace/homewrok_template/code (main) $ cd "/workspace/homewrok_template/code/" && javac DP.java && java DP
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+请输入最大容量：
+2000
+请输入n的值：
+400
+执行时间为：13.344669ms
+最大价值为：7550
+
+gitpod /workspace/homewrok_template/code (main) $ cd "/workspace/homewrok_template/code/" && javac DP.java && java DP
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+请输入最大容量：
+2000
+请输入n的值：
+800
+执行时间为：20.351778ms
+最大价值为：10089
+
+请输入最大容量：
+2000
+请输入n的值：
+2000
+执行时间为：47.276096ms
+最大价值为：16762

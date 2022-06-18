@@ -2,7 +2,7 @@
  * @Author: AlinaClr 1516690324@qq.com
  * @Date: 2022-06-18 14:22:40
  * @LastEditors: AlinaClr 1516690324@qq.com
- * @LastEditTime: 2022-06-18 14:22:43
+ * @LastEditTime: 2022-06-18 16:24:25
  * @FilePath: /homewrok_template/code/compareDPandDC.java
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -22,8 +22,8 @@ public class compareDPandDC {
         int n = s.nextInt();
         int result1 = dcf(n);
         int result2 = dpf(n);
-        System.out.println(result1 + "分治法运行次数为" + count1);
-        System.out.println(result2 + "动态规划运行次数为" + count2);
+        System.out.println("基本操作次数为:"+result1 + "  分治法运行次数为" + count1);
+        System.out.println("基本操作次数为:"+result2 + "  动态规划运行次数为" + count2);
     }
 
     public static int dcf(int n) {

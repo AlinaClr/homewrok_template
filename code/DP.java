@@ -2,7 +2,7 @@
  * @Author: AlinaClr 1516690324@qq.com
  * @Date: 2022-06-18 14:17:54
  * @LastEditors: AlinaClr 1516690324@qq.com
- * @LastEditTime: 2022-06-18 14:17:58
+ * @LastEditTime: 2022-06-18 16:17:28
  * @FilePath: /homewrok_template/DP.java
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -13,7 +13,6 @@ public class DP {
     private static Scanner s;
 
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
         s = new Scanner(System.in);
         System.out.println("请输入最大容量：");
         int c = s.nextInt();
@@ -23,8 +22,7 @@ public class DP {
         int[] v = new int[n+1];
         w[0]=0;
         v[0]=0;
-        c = 5;
-
+        
         for (int i = 1; i <= n; i++) {
             w[i] = (int)((Math.random() * 1103515245 + 12345) % 100);
         }
@@ -32,6 +30,7 @@ public class DP {
             v[i] = (int)((Math.random() * 1103515245 + 12345) % 100);
         }
         int[][] dp = new int[n + 1][c + 1];
+
         long start=System.nanoTime();
         for (int i = 0; i <=n; i++) {
             dp[i][0] = 0;
@@ -52,7 +51,7 @@ public class DP {
         long end=System.nanoTime();
 
         System.out.println("执行时间为："+(end-start)/1000000.0+"ms");
-        System.out.println(dp[n][c]);
+        System.out.println("最大价值为："+dp[n][c]);
     }
 
     private static int max(int a, int b) {
