@@ -1,6 +1,14 @@
+<!--
+ * @Author: AlinaClr 1516690324@qq.com
+ * @Date: 2022-06-18 15:54:35
+ * @LastEditors: AlinaClr 1516690324@qq.com
+ * @LastEditTime: 2022-06-18 16:39:35
+ * @FilePath: /homewrok_template/README.md
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
 # XXXX实验报告
 
-## 学号：XXX
+## 学号：20201060353
 
 >注:为保护同学隐私，请不要填写姓名
 
@@ -55,3 +63,4 @@ gitpod /workspace/homewrok_template (main) $ python max.py
 14
 
 ```
+

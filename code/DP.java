@@ -2,7 +2,7 @@
  * @Author: AlinaClr 1516690324@qq.com
  * @Date: 2022-06-18 14:17:54
  * @LastEditors: AlinaClr 1516690324@qq.com
- * @LastEditTime: 2022-06-18 16:17:28
+ * @LastEditTime: 2022-06-18 16:33:17
  * @FilePath: /homewrok_template/DP.java
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -29,6 +29,7 @@ public class DP {
         for (int i = 1; i <= n; i++) {
             v[i] = (int)((Math.random() * 1103515245 + 12345) % 100);
         }
+        
         int[][] dp = new int[n + 1][c + 1];
 
         long start=System.nanoTime();
