@@ -2,72 +2,79 @@
  * @Author: AlinaClr 1516690324@qq.com
  * @Date: 2022-06-18 14:21:28
  * @LastEditors: AlinaClr 1516690324@qq.com
- * @LastEditTime: 2022-06-18 14:26:19
+ * @LastEditTime: 2022-06-18 15:54:47
  * @FilePath: /homewrok_template/code/KnapsackGreedy.java
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
-import java.util.*;
+import java.util.Scanner;
 
 public class KnapsackGreedy {
-	private static Scanner s;
+    public static void main(String args[]){
+        int n,i,j;
+        double C;
+        System.out.println("请输入待选择的物品的个数：");
+        Scanner scanner = new Scanner(System.in);
+        n = scanner.nextInt();
+        System.out.println("请输入背包容量：");
+        C = scanner.nextDouble();
+        double[] w = new double[]{18,15,10};    //物品重量数组
+        double[] v = new double[]{25,24,15};    //物品价值数组
+        double[] x = new double[n];//平均价值
+        //for(i = 0; i < n; i++){
+        //    a[i] = Math.floor(Math.random()*20);
+        //}
+        //for(i = 0; i < n; i++){
+          //  b[i] = Math.floor(Math.random()*20);
+        //}
+        double value = Knapsack(w,v,x,C,n);
+        System.out.println("最大价值为："+value);
+    }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		s = new Scanner(System.in);
-		int c = s.nextInt();// ��������
-		int n = s.nextInt();// ��Ʒ����
-		things[] t = new things[n];
-		for (int i = 0; i < n; i++) {
-			t[i]=new things();
-			//�ڲ����Ƕ�̬�ģ�Ҳ���ǿ�ͷ��public class��ͷ������������public static class main��
-			//��Java�У����еľ�̬��������ֱ�ӵ��ö�̬������
-			//ֻ�н�ĳ���ڲ�������Ϊ��̬�࣬Ȼ����ܹ��ھ�̬���е��ø���ĳ�Ա�������Ա������
-			//�����ڲ��������䶯������£���򵥵Ľ���취�ǽ�public class��Ϊpublic static class
-			t[i].value = Math.random() * 100;
-			t[i].weight =Math.random() * 10%c;
-			t[i].valuep = t[i].value / t[i].weight;
+    static void sort(double[] a, double[] b, int n){
+        double[] c = new double[n];
+        double temp;
+        for(int i = 0; i < n; i++){
+            c[i] = b[i]/a[i];
+        }
+        //利用冒泡排序对平均价值进行排序并交换
+        for(int i=0;i<n;i++){
+            for(int j=i;j<n-1;j++){
+                if(c[j]<c[j+1]){
+                    temp = c[j];
+                    c[j] = c[j+1];
+                    c[j+1] = temp;
+                    temp = a[j];
+                    a[j] = a[j+1];
+                    a[j+1] = temp;
+                    temp = b[j];
+                    b[j] = b[j+1];
+                    b[j+1] = temp;
+                 }
+            }
+        }
+    }
 
-		}
-		long start=System.nanoTime();
-		for (int i = 1; i < n; i++) {
-			double temp = t[i].valuep;
-			int j = i;
-			while (j > 0 && t[j - 1].valuep > temp) {
-				t[j].valuep = t[j - 1].valuep;
-				t[j].value = t[j - 1].value;
-				t[j].weight = t[j - 1].weight;
-				j--;
-			}
-			t[j].valuep = temp;
-			double temp1 = t[i].weight;
-			t[i].weight = t[j].weight;
-			t[j].weight = temp1;
-			double temp2=t[i].value;
-			t[i].value = t[j].value;
-			t[j].value = temp2;
-		}
-		double total=0;
-		int k=n-1;
-		while(c>0&&k>=0) {
-			if(c>=t[k].weight) {
-				total+=t[k].value;
-				c-=t[k].weight;
-				k--;
-			}else if(c<t[k].weight){//��������װ����
-				total+=t[k].valuep*c;
-				c=0;
-			}
-		}
-		long end=System.nanoTime();
-		System.out.println("����ʱ��Ϊ"+(end-start)/1000000.0+"ms");
-		//System.out.println("�ܼ�ֵΪ"+total);
-	}
-
-	public static class things {
-		double value;
-		double weight;
-		double valuep;
-		
-	}
-
+    static double Knapsack(double[] a, double[] b, double[] x, double C, int n){
+        int i,j;
+        double cu;
+        double result = 0;
+        sort(a,b,n);
+        for(i=0;i<n;i++){
+            x[i] = 0;
+        }
+        cu = C;
+        for(i=0;i<n;i++){
+            if(a[i] > cu)
+                break;
+            x[i] = 1;
+            cu = cu - a[i];
+        }
+        if(i<=n)
+            x[i] = cu / a[i];
+        for(i=0;i<n;i++){
+            result += x[i]*b[i];
+        }
+        System.out.println(result);
+        return result;
+    }
 }

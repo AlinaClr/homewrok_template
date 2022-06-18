@@ -1,0 +1,11 @@
+测试程序正确性：
+gitpod /workspace/homewrok_template (main) $ cd "/workspace/homewrok_template/code/" && javac KnapsackGreedy.java && java KnapsackGreedy
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+Picked up JAVA_TOOL_OPTIONS:  -Xmx3435m
+请输入待选择的物品的个数：
+3
+请输入背包容量：
+20
+10.0
+31.5
+最大价值为：31.5
