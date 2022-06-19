@@ -2,7 +2,7 @@
  * @Author: AlinaClr 1516690324@qq.com
  * @Date: 2022-06-18 14:23:54
  * @LastEditors: AlinaClr 1516690324@qq.com
- * @LastEditTime: 2022-06-18 14:25:03
+ * @LastEditTime: 2022-06-19 02:53:44
  * @FilePath: /homewrok_template/code/sort.java
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -26,12 +26,18 @@ public class sort {
 
         long start1=System.nanoTime();
         bubbleSort(numbers, n);
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.print(numbers[i] + ", ");
+         }
         long end1=System.nanoTime();
         System.out.println("基本操作执行次数："+count1+"次");
         System.out.println("冒泡排序执行时间:" + (end1-start1)/1000000.0+"ms");
 
         long start2=System.nanoTime();
         mergeSort(numbers, 0, n - 1);
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.print(numbers[i] + ", ");
+         }
         long end2=System.nanoTime();
         System.out.println();
         System.out.println("归并排序基本操作执行次数："+count2+"次");
@@ -39,6 +45,9 @@ public class sort {
 
         long start3=System.nanoTime();
         quickSort(numbers, 0, n - 1);
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.print(numbers[i] + ", ");
+         }
         long end3=System.nanoTime();
         System.out.println();
         System.out.println("快速排序基本操作执行次数："+count3+"次");

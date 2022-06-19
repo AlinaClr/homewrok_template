@@ -144,7 +144,6 @@ if __name__ == '__main__':
     bubbleSort(randomNum)
     mergeSort(randomNum,len(randomNum))
     quickSort(randomNum)
-    print(count1)
-    print(count2)
-    print(count3)
-
+    print(f'冒泡排序基本操作执行次数：{count1}')
+    print(f'归并排序基本操作执行次数：{count2}')
+    print(f'快速排序基本操作执行次数：{count3}')
